@@ -1,1 +1,10 @@
+# vim temp file
 .DS_Store
+*.un~
+*.DS_Store
+*.swp
+
+# xlearn output
+.bin
+.out
+.model
