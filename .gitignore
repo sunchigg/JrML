@@ -11,4 +11,6 @@
 
 # files ignored
 *.zip
+*.pickle
+*.p
 submit_to_kaggle.csv
