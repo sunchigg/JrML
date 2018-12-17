@@ -8,4 +8,7 @@
 .bin
 .out
 .model
+
+# files ignored
 *.zip
+submit_to_kaggle.csv
