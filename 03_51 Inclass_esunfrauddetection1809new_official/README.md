@@ -1,3 +1,5 @@
+# https://www.kaggle.com/c/esunfrauddetection1809new
+
 ## Warning
 
 ### 請保持誠信正直，若於訓練過程中，請勿參考，謝謝。
