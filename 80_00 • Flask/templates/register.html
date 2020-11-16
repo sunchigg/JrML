@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Title </title>
+</head>
+<body>
+        <form method=“post”>
+            {{form.csrf_token}}
+    
+            <h1> 帳號申請 </h1>
+    
+            {{ form.user_name.label }}
+            <p>{{ form.user_name }}</p>
+            {% for msg in form.user_name.errors %}
+            <p>{{ msg }}</p>
+            {% endfor %}
+            {{ form.password.label }}
+            <p>{{ form.password }}</p>
+            {% for msg in form.password.errors %}
+            <p>{{ msg }}</p>
+            {% endfor %}
+            {{ form.password2.label }}
+            <p>{{ form.password2 }}</p>
+            {% for msg in form.password2.errors %}
+            <p>{{ msg }}</p>
+            {% endfor %}
+
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Title</title>
+</head>
+<body>
+      <h1>想喝哪類的飲料</h1>
+      <form method="POST">
+      <select name="drink">
+      {% for d in DRINK %}
+      <option>{{ d }}</option>
+      {% endfor %}
+       </select>
+       <input type="submit" value="Search">
+       </form>
+
+       <div class=page>
+       <h1>Drink List</h1>
+       <h2>{{titles}}</h2>
+       {{ table|safe }}
+        </div>
+</body>
+</html>
