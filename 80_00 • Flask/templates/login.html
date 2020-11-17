@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> login轉導頁demo </title>
+</head>
+    <body>
+
+        {% include 'common/header.html' %}
+        <div>
+            <h1> login轉導頁demo </h1>
+            <h3> 靜態文件範例圖 </h3>
+            <img src="{{ url_for('static', filename='Coaster_Rascal.jpg') }}" width="200">
+        </div>
+        {% include 'common/footer.html' %}
+        <!-- 在templates創一個common目錄，使之(footer.html)得以透過include被共用。 -->
+        {% extends 'base.html' %}
+
+    </body>
+</html>

@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 """
+http://127.0.0.1:5000/register
 """
 from flask import Flask, render_template
 from flask_wtf import FlaskForm
@@ -31,10 +32,20 @@ class RegisterForm(FlaskForm):
 def register():
     """
     """
+    context = {
+        'developer': {
+            'name': 'Francislin'
+        }
+    }  # 這是demo用字典收變量
     form = RegisterForm()
     if form.validate_on_submit():
         uname = form.user_name.data
-    return render_template("register.html", form=form)
+    return render_template("register.html", form=form, context=context)
+
+
+@app.route('/login/')
+def login():
+    return render_template('login.html')
 
 
 if __name__ == '__main__':

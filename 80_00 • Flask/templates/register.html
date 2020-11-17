@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title> Title </title>
+    <title> 註冊頁demo </title>
 </head>
 <body>
         <form method=“post”>
@@ -24,6 +24,10 @@
             {% for msg in form.password2.errors %}
             <p>{{ msg }}</p>
             {% endfor %}
+            <a href="/login/">登入(錯誤示範)</a><!-- 實際開發不會將網址寫死，不方便後期維護，建議用url_for -->
+            <a href="{{ url_for('login') }}">登入</a><!-- 再去@app.route('/login/') define -->
+            <p align="left">開發者：{{ context.developer.name }}</p>
+            <a href="{{ url_for('login') }}">靜態文件範例圖</a>
 
     </body>
 </html>

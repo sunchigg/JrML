@@ -8,8 +8,8 @@ import pandas as pd
 
 app = Flask(__name__)
 app.config["SECRET_KEY"] = "d3y23udh2noidmp2o"
-csv_file = "static/drink.txt"
-df = pd.read_csv(csv_file, encoding='utf-16')
+csv_file = "static/drink.csv"
+df = pd.read_csv(csv_file)
 
 
 @app.route('/menu2', methods=['POST', 'GET'])
