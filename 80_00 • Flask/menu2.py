@@ -18,7 +18,7 @@ def menu2():
     if 'drink' in request.form:
         eid = request.form.get('drink')
         step2 = df[df['drink1'] == eid][['Drink', 'Price']]
-        return render_template('menu2.html', tables=[step2.to_html(classes='data', index=False)], titles=eid, DRINK=DRINK)
+        return render_template('menu2.html', tables=step2.to_html(classes='data', index=False), titles=eid, DRINK=DRINK)
     return render_template('menu2.html', DRINK=DRINK)
 
 
